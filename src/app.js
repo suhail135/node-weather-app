@@ -7,6 +7,7 @@ const forcast = require('./utils/forcast')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //define path for Express Config
 const pulicpath = path.join(__dirname, '../public')
@@ -89,6 +90,6 @@ app.get('*',(eeq,res)=>{
     })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is up on port 3000')
 })
